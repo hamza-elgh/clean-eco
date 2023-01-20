@@ -47,7 +47,30 @@ All css files are placed in /css/ folder
 .class-top {
     top: -292px;
     z-index: 99;
+    margin-bottom: -240px ;
 }
+.class-bloc-clr {
+    color: white;
+    padding: 40px 0px;
+}
+
+.class-bloc-clr li {
+    color: white;
+}
+
+.class-bloc-clr h2,.class-bloc-clr h3 {
+    color: white;
+}
+blockquote, blockquote a, blockquote a:hover {
+    color: #ffffff !important;
+}
+.class-bloc-clr hr {
+    height: 6px;
+    color: white !important;
+	width : 20%;
+	background-color: #95c11f;
+}
+
 
 
 
