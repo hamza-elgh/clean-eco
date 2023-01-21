@@ -16,10 +16,12 @@
 
 
 -- Listage de la structure de la base pour clean-eco
+DROP DATABASE IF EXISTS `clean-eco`;
 CREATE DATABASE IF NOT EXISTS `clean-eco` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `clean-eco`;
 
 -- Listage de la structure de table clean-eco. wp_commentmeta
+DROP TABLE IF EXISTS `wp_commentmeta`;
 CREATE TABLE IF NOT EXISTS `wp_commentmeta` (
   `meta_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `comment_id` bigint unsigned NOT NULL DEFAULT '0',
@@ -28,11 +30,12 @@ CREATE TABLE IF NOT EXISTS `wp_commentmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `comment_id` (`comment_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_comments
+DROP TABLE IF EXISTS `wp_comments`;
 CREATE TABLE IF NOT EXISTS `wp_comments` (
   `comment_ID` bigint unsigned NOT NULL AUTO_INCREMENT,
   `comment_post_ID` bigint unsigned NOT NULL DEFAULT '0',
@@ -60,6 +63,7 @@ CREATE TABLE IF NOT EXISTS `wp_comments` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_db7_forms
+DROP TABLE IF EXISTS `wp_db7_forms`;
 CREATE TABLE IF NOT EXISTS `wp_db7_forms` (
   `form_id` bigint NOT NULL AUTO_INCREMENT,
   `form_post_id` bigint NOT NULL,
@@ -71,6 +75,7 @@ CREATE TABLE IF NOT EXISTS `wp_db7_forms` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_links
+DROP TABLE IF EXISTS `wp_links`;
 CREATE TABLE IF NOT EXISTS `wp_links` (
   `link_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `link_url` varchar(255) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
@@ -92,6 +97,7 @@ CREATE TABLE IF NOT EXISTS `wp_links` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_options
+DROP TABLE IF EXISTS `wp_options`;
 CREATE TABLE IF NOT EXISTS `wp_options` (
   `option_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `option_name` varchar(191) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
@@ -100,11 +106,12 @@ CREATE TABLE IF NOT EXISTS `wp_options` (
   PRIMARY KEY (`option_id`),
   UNIQUE KEY `option_name` (`option_name`),
   KEY `autoload` (`autoload`)
-) ENGINE=InnoDB AUTO_INCREMENT=864 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1209 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_postmeta
+DROP TABLE IF EXISTS `wp_postmeta`;
 CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   `meta_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `post_id` bigint unsigned NOT NULL DEFAULT '0',
@@ -113,11 +120,12 @@ CREATE TABLE IF NOT EXISTS `wp_postmeta` (
   PRIMARY KEY (`meta_id`),
   KEY `post_id` (`post_id`),
   KEY `meta_key` (`meta_key`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=580 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=655 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_posts
+DROP TABLE IF EXISTS `wp_posts`;
 CREATE TABLE IF NOT EXISTS `wp_posts` (
   `ID` bigint unsigned NOT NULL AUTO_INCREMENT,
   `post_author` bigint unsigned NOT NULL DEFAULT '0',
@@ -147,11 +155,12 @@ CREATE TABLE IF NOT EXISTS `wp_posts` (
   KEY `type_status_date` (`post_type`,`post_status`,`post_date`,`ID`),
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`)
-) ENGINE=InnoDB AUTO_INCREMENT=2377 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2419 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_revslider_css
+DROP TABLE IF EXISTS `wp_revslider_css`;
 CREATE TABLE IF NOT EXISTS `wp_revslider_css` (
   `id` int NOT NULL AUTO_INCREMENT,
   `handle` text NOT NULL,
@@ -166,6 +175,7 @@ CREATE TABLE IF NOT EXISTS `wp_revslider_css` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_revslider_css_bkp
+DROP TABLE IF EXISTS `wp_revslider_css_bkp`;
 CREATE TABLE IF NOT EXISTS `wp_revslider_css_bkp` (
   `id` int NOT NULL AUTO_INCREMENT,
   `handle` text NOT NULL,
@@ -180,6 +190,7 @@ CREATE TABLE IF NOT EXISTS `wp_revslider_css_bkp` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_revslider_layer_animations
+DROP TABLE IF EXISTS `wp_revslider_layer_animations`;
 CREATE TABLE IF NOT EXISTS `wp_revslider_layer_animations` (
   `id` int NOT NULL AUTO_INCREMENT,
   `handle` text NOT NULL,
@@ -191,6 +202,7 @@ CREATE TABLE IF NOT EXISTS `wp_revslider_layer_animations` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_revslider_layer_animations_bkp
+DROP TABLE IF EXISTS `wp_revslider_layer_animations_bkp`;
 CREATE TABLE IF NOT EXISTS `wp_revslider_layer_animations_bkp` (
   `id` int NOT NULL AUTO_INCREMENT,
   `handle` text NOT NULL,
@@ -202,6 +214,7 @@ CREATE TABLE IF NOT EXISTS `wp_revslider_layer_animations_bkp` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_revslider_navigations
+DROP TABLE IF EXISTS `wp_revslider_navigations`;
 CREATE TABLE IF NOT EXISTS `wp_revslider_navigations` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(191) NOT NULL,
@@ -216,6 +229,7 @@ CREATE TABLE IF NOT EXISTS `wp_revslider_navigations` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_revslider_navigations_bkp
+DROP TABLE IF EXISTS `wp_revslider_navigations_bkp`;
 CREATE TABLE IF NOT EXISTS `wp_revslider_navigations_bkp` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(191) NOT NULL,
@@ -230,6 +244,7 @@ CREATE TABLE IF NOT EXISTS `wp_revslider_navigations_bkp` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_revslider_sliders
+DROP TABLE IF EXISTS `wp_revslider_sliders`;
 CREATE TABLE IF NOT EXISTS `wp_revslider_sliders` (
   `id` int NOT NULL AUTO_INCREMENT,
   `title` tinytext NOT NULL,
@@ -244,6 +259,7 @@ CREATE TABLE IF NOT EXISTS `wp_revslider_sliders` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_revslider_sliders_bkp
+DROP TABLE IF EXISTS `wp_revslider_sliders_bkp`;
 CREATE TABLE IF NOT EXISTS `wp_revslider_sliders_bkp` (
   `id` int NOT NULL AUTO_INCREMENT,
   `title` tinytext NOT NULL,
@@ -258,6 +274,7 @@ CREATE TABLE IF NOT EXISTS `wp_revslider_sliders_bkp` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_revslider_slides
+DROP TABLE IF EXISTS `wp_revslider_slides`;
 CREATE TABLE IF NOT EXISTS `wp_revslider_slides` (
   `id` int NOT NULL AUTO_INCREMENT,
   `slider_id` int NOT NULL,
@@ -267,11 +284,12 @@ CREATE TABLE IF NOT EXISTS `wp_revslider_slides` (
   `settings` text NOT NULL,
   PRIMARY KEY (`id`),
   KEY `slider_id_index` (`slider_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_revslider_slides_bkp
+DROP TABLE IF EXISTS `wp_revslider_slides_bkp`;
 CREATE TABLE IF NOT EXISTS `wp_revslider_slides_bkp` (
   `id` int NOT NULL AUTO_INCREMENT,
   `slider_id` int NOT NULL,
@@ -286,6 +304,7 @@ CREATE TABLE IF NOT EXISTS `wp_revslider_slides_bkp` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_revslider_static_slides
+DROP TABLE IF EXISTS `wp_revslider_static_slides`;
 CREATE TABLE IF NOT EXISTS `wp_revslider_static_slides` (
   `id` int NOT NULL AUTO_INCREMENT,
   `slider_id` int NOT NULL,
@@ -299,6 +318,7 @@ CREATE TABLE IF NOT EXISTS `wp_revslider_static_slides` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_revslider_static_slides_bkp
+DROP TABLE IF EXISTS `wp_revslider_static_slides_bkp`;
 CREATE TABLE IF NOT EXISTS `wp_revslider_static_slides_bkp` (
   `id` int NOT NULL AUTO_INCREMENT,
   `slider_id` int NOT NULL,
@@ -312,6 +332,7 @@ CREATE TABLE IF NOT EXISTS `wp_revslider_static_slides_bkp` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_termmeta
+DROP TABLE IF EXISTS `wp_termmeta`;
 CREATE TABLE IF NOT EXISTS `wp_termmeta` (
   `meta_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `term_id` bigint unsigned NOT NULL DEFAULT '0',
@@ -325,6 +346,7 @@ CREATE TABLE IF NOT EXISTS `wp_termmeta` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_terms
+DROP TABLE IF EXISTS `wp_terms`;
 CREATE TABLE IF NOT EXISTS `wp_terms` (
   `term_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(200) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
@@ -333,11 +355,12 @@ CREATE TABLE IF NOT EXISTS `wp_terms` (
   PRIMARY KEY (`term_id`),
   KEY `slug` (`slug`(191)),
   KEY `name` (`name`(191))
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_term_relationships
+DROP TABLE IF EXISTS `wp_term_relationships`;
 CREATE TABLE IF NOT EXISTS `wp_term_relationships` (
   `object_id` bigint unsigned NOT NULL DEFAULT '0',
   `term_taxonomy_id` bigint unsigned NOT NULL DEFAULT '0',
@@ -349,6 +372,7 @@ CREATE TABLE IF NOT EXISTS `wp_term_relationships` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_term_taxonomy
+DROP TABLE IF EXISTS `wp_term_taxonomy`;
 CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
   `term_taxonomy_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `term_id` bigint unsigned NOT NULL DEFAULT '0',
@@ -359,11 +383,12 @@ CREATE TABLE IF NOT EXISTS `wp_term_taxonomy` (
   PRIMARY KEY (`term_taxonomy_id`),
   UNIQUE KEY `term_id_taxonomy` (`term_id`,`taxonomy`),
   KEY `taxonomy` (`taxonomy`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_usermeta
+DROP TABLE IF EXISTS `wp_usermeta`;
 CREATE TABLE IF NOT EXISTS `wp_usermeta` (
   `umeta_id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `user_id` bigint unsigned NOT NULL DEFAULT '0',
@@ -377,6 +402,7 @@ CREATE TABLE IF NOT EXISTS `wp_usermeta` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_users
+DROP TABLE IF EXISTS `wp_users`;
 CREATE TABLE IF NOT EXISTS `wp_users` (
   `ID` bigint unsigned NOT NULL AUTO_INCREMENT,
   `user_login` varchar(60) COLLATE utf8mb4_unicode_520_ci NOT NULL DEFAULT '',
@@ -397,6 +423,7 @@ CREATE TABLE IF NOT EXISTS `wp_users` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_yoast_indexable
+DROP TABLE IF EXISTS `wp_yoast_indexable`;
 CREATE TABLE IF NOT EXISTS `wp_yoast_indexable` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `permalink` longtext COLLATE utf8mb4_unicode_520_ci,
@@ -457,11 +484,12 @@ CREATE TABLE IF NOT EXISTS `wp_yoast_indexable` (
   KEY `subpages` (`post_parent`,`object_type`,`post_status`,`object_id`),
   KEY `prominent_words` (`prominent_words_version`,`object_type`,`object_sub_type`,`post_status`),
   KEY `published_sitemap_index` (`object_published_at`,`is_robots_noindex`,`object_type`,`object_sub_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=76 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=82 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
 
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_yoast_indexable_hierarchy
+DROP TABLE IF EXISTS `wp_yoast_indexable_hierarchy`;
 CREATE TABLE IF NOT EXISTS `wp_yoast_indexable_hierarchy` (
   `indexable_id` int unsigned NOT NULL,
   `ancestor_id` int unsigned NOT NULL,
@@ -476,6 +504,7 @@ CREATE TABLE IF NOT EXISTS `wp_yoast_indexable_hierarchy` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_yoast_migrations
+DROP TABLE IF EXISTS `wp_yoast_migrations`;
 CREATE TABLE IF NOT EXISTS `wp_yoast_migrations` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `version` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL,
@@ -486,6 +515,7 @@ CREATE TABLE IF NOT EXISTS `wp_yoast_migrations` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_yoast_primary_term
+DROP TABLE IF EXISTS `wp_yoast_primary_term`;
 CREATE TABLE IF NOT EXISTS `wp_yoast_primary_term` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `post_id` bigint DEFAULT NULL,
@@ -502,6 +532,7 @@ CREATE TABLE IF NOT EXISTS `wp_yoast_primary_term` (
 -- Les données exportées n'étaient pas sélectionnées.
 
 -- Listage de la structure de table clean-eco. wp_yoast_seo_links
+DROP TABLE IF EXISTS `wp_yoast_seo_links`;
 CREATE TABLE IF NOT EXISTS `wp_yoast_seo_links` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
   `url` varchar(255) DEFAULT NULL,
@@ -518,7 +549,7 @@ CREATE TABLE IF NOT EXISTS `wp_yoast_seo_links` (
   PRIMARY KEY (`id`),
   KEY `link_direction` (`post_id`,`type`),
   KEY `indexable_link_direction` (`indexable_id`,`type`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb3;
 
 -- Les données exportées n'étaient pas sélectionnées.
 

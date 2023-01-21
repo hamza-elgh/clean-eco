@@ -70,7 +70,11 @@ blockquote, blockquote a, blockquote a:hover {
 	width : 20%;
 	background-color: #95c11f;
 }
-
+.class-hr2 hr {
+    background-color: #a2d221 !important;
+    height: 5px !important;
+    width: 30% !important;
+}
 
 
 
