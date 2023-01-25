@@ -114,7 +114,7 @@ if( $back_to_top_class == 'hide' ){
 								if( mfn_opts_get('footer-copy') ){
 									echo do_shortcode( mfn_opts_get('footer-copy') );
 								} else {
-									echo '&copy; '. date( 'Y' ) .' '. get_bloginfo( 'name' ) .'. All Rights Reserved. <a target="_blank" rel="nofollow" href="http://muffingroup.com">Muffin group</a>';
+									echo '&copy; '. date( 'Y' ) .' '. get_bloginfo( 'name' ) .'. Tous droits réservés | <a target="_blank" rel="nofollow" href="http://localhost/clean-eco/politique-de-confidentialite/">Mentions Légales</a>';
 								}
 							?>
 						</div>

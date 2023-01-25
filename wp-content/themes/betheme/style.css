@@ -22,14 +22,15 @@ All css files are placed in /css/ folder
     margin-top: -130px;
     z-index: 9;
 }
-.class-blc-text .wpb_content_element {
-        padding: 40px 20px;
-        box-shadow: rgb(0 0 0 / 25%) 0px 3px 11px 0px !important;
-        -moz-box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 11px 0px !important;
-        -webkit-box-shadow: rgb(0 0 0 / 25%) 0px 3px 11px 0px !important;
-        border-radius: 10px 10px 0 0 !important;
-        margin-bottom: 0px;
-	    background-color: white;
+.class-blc-text .vc_column-inner {
+    padding: 40px 20px;
+    box-shadow: rgb(0 0 0 / 25%) 0px 3px 11px 0px !important;
+    -moz-box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 11px 0px !important;
+    -webkit-box-shadow: rgb(0 0 0 / 25%) 0px 3px 11px 0px !important;
+    border-radius: 10px 10px 0 0 !important;
+    margin-bottom: 0px;
+    background-color: white;
+    margin: 30px;
 }
 .class-blc-text hr {
     background-color: #a2d221 !important;
@@ -76,17 +77,56 @@ blockquote, blockquote a, blockquote a:hover {
     width: 30% !important;
 }
 
+rs-static-layers {
+    background-color: #0000003b;
+}
+.class-shadow {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 50px 40px;
+    margin-top: 30px;
+}
+.top_bar_left.clearfix {
+    display: none;
+}
 
+.is-sticky .top_bar_left.clearfix {
+    display: block !important;
+}
+#Top_bar.is-sticky {
+    height: 100px !important;
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    max-height: 100% !important;
+}
 
+li#menu-item-2424, li#menu-item-2426 {
+    background-color: #2fac66;
+    border-radius: 100px;
+    padding: 0px 60px;
+    margin: 0px 20px !important;
+}
+#Top_bar .menu > li.current-menu-item > a, #Top_bar .menu > li.current_page_item > a, #Top_bar .menu > li.current-menu-parent > a, #Top_bar .menu > li.current-page-parent > a, #Top_bar .menu > li.current-menu-ancestor > a, #Top_bar .menu > li.current-page-ancestor > a, #Top_bar .menu > li.current_page_ancestor > a {
+    color: #ffffff ;
+}
+.menu-highlight #Top_bar #menu > ul > li.current-menu-item > a, .menu-highlight #Top_bar #menu > ul > li.current_page_item > a, .menu-highlight #Top_bar #menu > ul > li.current-menu-parent > a, .menu-highlight #Top_bar #menu > ul > li.current-page-parent > a, .menu-highlight #Top_bar #menu > ul > li.current-menu-ancestor > a, .menu-highlight #Top_bar #menu > ul > li.current-page-ancestor > a, .menu-highlight #Top_bar #menu > ul > li.current_page_ancestor > a, .menu-highlight #Top_bar #menu > ul > li.hover > a {
+    background: #f04b4b00 !important;
+}
+#Top_bar .menu > li > a, #Top_bar #menu ul li.submenu .menu-toggle {
+    color: #ffffff ;
+}
+li#menu-item-2424:hover, li#menu-item-2426:hover {
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 25%) 0px 3px 11px 0px !important;
+    -moz-box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 11px 0px !important;
+    -webkit-box-shadow: rgb(0 0 0 / 25%) 0px 3px 11px 0px !important;
 
-
-
-
-
-
-
-
-
-
+}
+}
+#Top_bar .menu > li > a:hover {
+    color: #f04b4b00 !important;
+}
 
 
